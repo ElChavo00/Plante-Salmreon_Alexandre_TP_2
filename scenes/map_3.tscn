@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dk21useph4mf7"]
+[gd_scene load_steps=7 format=4 uid="uid://dk21useph4mf7"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_beonj"]
+[ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_awe8u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awe8u"]
 texture = ExtResource("1_beonj")
@@ -268,7 +269,7 @@ texture = ExtResource("1_beonj")
 [sub_resource type="TileSet" id="TileSet_s43yw"]
 sources/0 = SubResource("TileSetAtlasSource_c6pw2")
 
-[node name="map3" type="Node2D"]
+[node name="map3" type="Node2D" groups=["player"]]
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -280,3 +281,54 @@ tile_set = SubResource("TileSet_jsn8n")
 [node name="devant" type="TileMapLayer" parent="TileMap"]
 tile_map_data = PackedByteArray("AAADAP//AAADAAEAAAAEAP//AAADAAEAAAAFAP//AAADAAEAAAAGAP//AAADAAEAAAAKAP7/AAADAAEAAAALAP7/AAADAAEAAAAMAP7/AAADAAEAAAAQAPv/AAADAAEAAAARAPv/AAADAAEAAAASAPv/AAADAAEAAAASAPz/AAADAAEAAAAQAPz/AAADAAEAAAARAPz/AAADAAEAAAAKAP//AAADAAEAAAALAP//AAADAAEAAAAMAP//AAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAMAPr/AAADAAEAAAALAPr/AAADAAEAAAAKAPr/AAADAAEAAAAKAPn/AAADAAEAAAALAPn/AAADAAEAAAAMAPn/AAADAAEAAAADAPj/AAADAAEAAAAEAPj/AAADAAEAAAAFAPj/AAADAAEAAAAGAPj/AAADAAEAAAAGAPn/AAADAAEAAAAFAPn/AAADAAEAAAAEAPn/AAADAAEAAAADAPn/AAADAAEAAAD/////AAADAAEAAAD+////AAADAAEAAAD9////AAADAAEAAAD9//7/AAADAAEAAAD+//7/AAADAAEAAAD///7/AAADAAEAAAD5//z/AAADAAEAAAD4//z/AAADAAEAAAD3//z/AAADAAEAAAD3//v/AAADAAEAAAD4//v/AAADAAEAAAD5//v/AAADAAEAAAD9//r/AAADAAEAAAD+//r/AAADAAEAAAD///r/AAADAAEAAAD///n/AAADAAEAAAD+//n/AAADAAEAAAD9//n/AAADAAEAAAAGAA0AAAADAAEAAAAHAA0AAAADAAEAAAAIAA0AAAADAAEAAAAJAA0AAAADAAEAAAAKAA0AAAADAAEAAAAKAA4AAAADAAEAAAAJAA4AAAADAAEAAAAIAA4AAAADAAEAAAAHAA4AAAADAAEAAAAGAA4AAAADAAEAAAA2AAwAAAAFAAAAAAA3AAwAAAAFAAAAAAA4AAwAAAAFAAAAAAA5AAwAAAAFAAAAAAA2AAsAAAAFAAAAAAA3AAsAAAAFAAAAAAA4AAsAAAAFAAAAAAA5AAsAAAAFAAAAAAA2AAQAAAAFAAAAAAA2AAUAAAAFAAAAAAA3AAQAAAAFAAAAAAA3AAUAAAAFAAAAAAA4AAQAAAAFAAAAAAA4AAUAAAAFAAAAAAA5AAQAAAAFAAAAAAA5AAUAAAAFAAAAAAA9AAoAAAAFAAAAAAA9AAsAAAAFAAAAAAA+AAoAAAAFAAAAAAA+AAsAAAAFAAAAAAA/AAoAAAAFAAAAAAA/AAsAAAAFAAAAAABDAAcAAAAFAAAAAABDAAgAAAAFAAAAAABEAAcAAAAFAAAAAABEAAgAAAAFAAAAAABFAAcAAAAFAAAAAABFAAgAAAAFAAAAAAA9AAUAAAAFAAAAAAA9AAYAAAAFAAAAAAA+AAUAAAAFAAAAAAA+AAYAAAAFAAAAAAA/AAUAAAAFAAAAAAA/AAYAAAAFAAAAAAAwAAoAAAAFAAAAAAAwAAsAAAAFAAAAAAAxAAoAAAAFAAAAAAAxAAsAAAAFAAAAAAAyAAoAAAAFAAAAAAAyAAsAAAAFAAAAAAAqAAcAAAAFAAAAAAAqAAgAAAAFAAAAAAArAAcAAAAFAAAAAAArAAgAAAAFAAAAAAAsAAcAAAAFAAAAAAAsAAgAAAAFAAAAAAAwAAUAAAAFAAAAAAAwAAYAAAAFAAAAAAAxAAUAAAAFAAAAAAAxAAYAAAAFAAAAAAAyAAUAAAAFAAAAAAAyAAYAAAAFAAAAAABpAA0AAAAIAAEAAABpAA4AAAAIAAEAAABtAA0AAAAIAAEAAABtAA4AAAAIAAEAAAByAAsAAAAIAAEAAAByAAwAAAAIAAEAAAB1AAsAAAAIAAEAAABrAAsAAAAIAAEAAABkAAsAAAAIAAEAAABkAAwAAAAIAAEAAABhAAsAAAAIAAEAAABmAA8AAAAIAAEAAABwAA8AAAAIAAEAAABjAA8AAAAIAAEAAABzAA8AAAAIAAEAAABeAAkAAAAIAAEAAABfAAkAAAAIAAEAAAB3AAkAAAAIAAEAAAB4AAkAAAAIAAEAAAA=")
 tile_set = SubResource("TileSet_s43yw")
+
+[node name="Area2D" parent="TileMap" instance=ExtResource("2_awe8u")]
+position = Vector2(81, -194)
+
+[node name="Area2D2" parent="TileMap" instance=ExtResource("2_awe8u")]
+position = Vector2(184, -179)
+
+[node name="Area2D" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(284, -140)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(-25, -181)
+
+[node name="Area2D3" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(-122, -157)
+
+[node name="Area2D4" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(92, 175)
+
+[node name="Area2D5" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(894, 13)
+
+[node name="Area2D6" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(788, 11)
+
+[node name="Area2D7" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(699, 46)
+
+[node name="Area2D8" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1003, 15)
+
+[node name="Area2D9" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1091, 36)
+
+[node name="Area2D10" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1464, 123)
+
+[node name="Area2D11" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1980, 115)
+
+[node name="Area2D12" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1641, 206)
+
+[node name="Area2D13" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1797, 200)
+
+[node name="Area2D14" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1582, 213)
+
+[node name="Area2D15" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1856, 211)
