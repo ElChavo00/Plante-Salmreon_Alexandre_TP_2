@@ -215,29 +215,29 @@ position_smoothing_enabled = true
 [node name="coin" parent="." instance=ExtResource("3_rnjyy")]
 position = Vector2(40, -23)
 
-[node name="coin2" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(151, -56)
+[node name="coin2" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(111, -33)
 
-[node name="coin3" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(-98, -76)
+[node name="coin3" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(-138, -53)
 
-[node name="coin4" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(424, -55)
+[node name="coin4" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(384, -32)
 
-[node name="coin5" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(327, -57)
+[node name="coin5" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(287, -34)
 
-[node name="coin6" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(635, -7)
+[node name="coin6" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(595, 16)
 
-[node name="coin20" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(-171, 60)
+[node name="coin20" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(-211, 83)
 
-[node name="coin21" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(-227, -68)
+[node name="coin21" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(-267, -45)
 
-[node name="coin22" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(42, 86)
+[node name="coin22" parent="coin" instance=ExtResource("3_rnjyy")]
+position = Vector2(2, 109)
 
 [node name="killzone" parent="." instance=ExtResource("3_4vge2")]
 
@@ -249,8 +249,8 @@ shape = SubResource("WorldBoundaryShape2D_4vge2")
 position = Vector2(-232, 101)
 frame_progress = 0.13003
 
-[node name="mechant2" parent="." instance=ExtResource("2_04qyp")]
-position = Vector2(-209, 117)
+[node name="mechant2" parent="mechant" instance=ExtResource("2_04qyp")]
+position = Vector2(23, 16)
 frame_progress = 0.5105
 
 [node name="portal" parent="." instance=ExtResource("6_j7wrs")]

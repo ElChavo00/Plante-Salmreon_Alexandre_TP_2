@@ -1,43 +1,46 @@
 [gd_scene load_steps=13 format=3 uid="uid://c3sw2ja23an5q"]
 
-[ext_resource type="Script" uid="uid://b5wsduol2xu2x" path="res://scripts/portal_to_z_3.gd" id="1_6gwbc"]
+[ext_resource type="Script" uid="uid://dn2j8gpvu7ntd" path="res://scenes/portal_to_z3.gd" id="1_6gwbc"]
 [ext_resource type="Texture2D" uid="uid://c7rih840n2xcj" path="res://assets/sprites/Purple Portal Sprite Sheet.png" id="2_b054q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_beu2e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_b054q"]
 atlas = ExtResource("2_b054q")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_beukt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_beu2e"]
 atlas = ExtResource("2_b054q")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5b1c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_beukt"]
 atlas = ExtResource("2_b054q")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntocg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5b1c"]
 atlas = ExtResource("2_b054q")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_72cb3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntocg"]
 atlas = ExtResource("2_b054q")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ausdh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_72cb3"]
 atlas = ExtResource("2_b054q")
 region = Rect2(320, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2guoh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ausdh"]
 atlas = ExtResource("2_b054q")
 region = Rect2(384, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_chyq2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2guoh"]
 atlas = ExtResource("2_b054q")
 region = Rect2(448, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_s0plm"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_chyq2"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b054q")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_beu2e")
 }, {
@@ -58,25 +61,25 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2guoh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_chyq2")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k6bvi"]
-radius = 7.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0plm"]
+radius = 6.0
 height = 40.0
 
-[node name="portal_to_z_3" type="Node2D"]
+[node name="portal" type="Area2D"]
 script = ExtResource("1_6gwbc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_s0plm")
+sprite_frames = SubResource("SpriteFrames_chyq2")
+autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
-position = Vector2(-1, 4)
-shape = SubResource("CapsuleShape2D_k6bvi")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_s0plm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
