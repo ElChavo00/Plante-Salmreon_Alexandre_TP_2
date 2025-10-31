@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkp3t50l5l0oy" path="res://scenes/mechant.tscn" id="2_04qyp"]
 [ext_resource type="PackedScene" uid="uid://bu2jh26veowr7" path="res://scenes/killzone.tscn" id="3_4vge2"]
 [ext_resource type="PackedScene" uid="uid://guckiysv2ic1" path="res://scripts/coin.tscn" id="3_rnjyy"]
-[ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="6_j7wrs"]
+[ext_resource type="PackedScene" uid="uid://cx1xq56gyfakt" path="res://scenes/portal_to_z2.tscn" id="6_j7wrs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnjyy"]
 texture = ExtResource("2_4dvvg")
@@ -253,12 +253,5 @@ frame_progress = 0.13003
 position = Vector2(-209, 117)
 frame_progress = 0.5105
 
-[node name="portal_next_map" parent="." instance=ExtResource("6_j7wrs")]
-position = Vector2(952, -42)
-
-[node name="CollisionShape2D" parent="portal_next_map" index="1" groups=["player"]]
-
-[node name="destinationPoint" parent="portal_next_map" index="2"]
-position = Vector2(-245, -3)
-
-[editable path="portal_next_map"]
+[node name="portal" parent="." instance=ExtResource("6_j7wrs")]
+position = Vector2(955, -42)

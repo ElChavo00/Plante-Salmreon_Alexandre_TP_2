@@ -282,53 +282,104 @@ tile_set = SubResource("TileSet_jsn8n")
 tile_map_data = PackedByteArray("AAADAP//AAADAAEAAAAEAP//AAADAAEAAAAFAP//AAADAAEAAAAGAP//AAADAAEAAAAKAP7/AAADAAEAAAALAP7/AAADAAEAAAAMAP7/AAADAAEAAAAQAPv/AAADAAEAAAARAPv/AAADAAEAAAASAPv/AAADAAEAAAASAPz/AAADAAEAAAAQAPz/AAADAAEAAAARAPz/AAADAAEAAAAKAP//AAADAAEAAAALAP//AAADAAEAAAAMAP//AAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAMAPr/AAADAAEAAAALAPr/AAADAAEAAAAKAPr/AAADAAEAAAAKAPn/AAADAAEAAAALAPn/AAADAAEAAAAMAPn/AAADAAEAAAADAPj/AAADAAEAAAAEAPj/AAADAAEAAAAFAPj/AAADAAEAAAAGAPj/AAADAAEAAAAGAPn/AAADAAEAAAAFAPn/AAADAAEAAAAEAPn/AAADAAEAAAADAPn/AAADAAEAAAD/////AAADAAEAAAD+////AAADAAEAAAD9////AAADAAEAAAD9//7/AAADAAEAAAD+//7/AAADAAEAAAD///7/AAADAAEAAAD5//z/AAADAAEAAAD4//z/AAADAAEAAAD3//z/AAADAAEAAAD3//v/AAADAAEAAAD4//v/AAADAAEAAAD5//v/AAADAAEAAAD9//r/AAADAAEAAAD+//r/AAADAAEAAAD///r/AAADAAEAAAD///n/AAADAAEAAAD+//n/AAADAAEAAAD9//n/AAADAAEAAAAGAA0AAAADAAEAAAAHAA0AAAADAAEAAAAIAA0AAAADAAEAAAAJAA0AAAADAAEAAAAKAA0AAAADAAEAAAAKAA4AAAADAAEAAAAJAA4AAAADAAEAAAAIAA4AAAADAAEAAAAHAA4AAAADAAEAAAAGAA4AAAADAAEAAAA2AAwAAAAFAAAAAAA3AAwAAAAFAAAAAAA4AAwAAAAFAAAAAAA5AAwAAAAFAAAAAAA2AAsAAAAFAAAAAAA3AAsAAAAFAAAAAAA4AAsAAAAFAAAAAAA5AAsAAAAFAAAAAAA2AAQAAAAFAAAAAAA2AAUAAAAFAAAAAAA3AAQAAAAFAAAAAAA3AAUAAAAFAAAAAAA4AAQAAAAFAAAAAAA4AAUAAAAFAAAAAAA5AAQAAAAFAAAAAAA5AAUAAAAFAAAAAAA9AAoAAAAFAAAAAAA9AAsAAAAFAAAAAAA+AAoAAAAFAAAAAAA+AAsAAAAFAAAAAAA/AAoAAAAFAAAAAAA/AAsAAAAFAAAAAABDAAcAAAAFAAAAAABDAAgAAAAFAAAAAABEAAcAAAAFAAAAAABEAAgAAAAFAAAAAABFAAcAAAAFAAAAAABFAAgAAAAFAAAAAAA9AAUAAAAFAAAAAAA9AAYAAAAFAAAAAAA+AAUAAAAFAAAAAAA+AAYAAAAFAAAAAAA/AAUAAAAFAAAAAAA/AAYAAAAFAAAAAAAwAAoAAAAFAAAAAAAwAAsAAAAFAAAAAAAxAAoAAAAFAAAAAAAxAAsAAAAFAAAAAAAyAAoAAAAFAAAAAAAyAAsAAAAFAAAAAAAqAAcAAAAFAAAAAAAqAAgAAAAFAAAAAAArAAcAAAAFAAAAAAArAAgAAAAFAAAAAAAsAAcAAAAFAAAAAAAsAAgAAAAFAAAAAAAwAAUAAAAFAAAAAAAwAAYAAAAFAAAAAAAxAAUAAAAFAAAAAAAxAAYAAAAFAAAAAAAyAAUAAAAFAAAAAAAyAAYAAAAFAAAAAABpAA0AAAAIAAEAAABpAA4AAAAIAAEAAABtAA0AAAAIAAEAAABtAA4AAAAIAAEAAAByAAsAAAAIAAEAAAByAAwAAAAIAAEAAAB1AAsAAAAIAAEAAABrAAsAAAAIAAEAAABkAAsAAAAIAAEAAABkAAwAAAAIAAEAAABhAAsAAAAIAAEAAABmAA8AAAAIAAEAAABwAA8AAAAIAAEAAABjAA8AAAAIAAEAAABzAA8AAAAIAAEAAABeAAkAAAAIAAEAAABfAAkAAAAIAAEAAAB3AAkAAAAIAAEAAAB4AAkAAAAIAAEAAAA=")
 tile_set = SubResource("TileSet_s43yw")
 
-[node name="Area2D" parent="TileMap" instance=ExtResource("2_awe8u")]
-position = Vector2(81, -194)
-
-[node name="Area2D2" parent="TileMap" instance=ExtResource("2_awe8u")]
-position = Vector2(184, -179)
-
-[node name="Area2D" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(284, -140)
-
-[node name="Area2D2" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(-25, -181)
-
-[node name="Area2D3" parent="." instance=ExtResource("2_awe8u")]
+[node name="z1_p1" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(-122, -157)
 
-[node name="Area2D4" parent="." instance=ExtResource("2_awe8u")]
+[node name="destinationPoint" parent="z1_p1" index="2"]
+position = Vector2(201, 119)
+
+[node name="z1_p2_V" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(-25, -181)
+
+[node name="destinationPoint" parent="z1_p2_V" index="2"]
+position = Vector2(921, 332)
+
+[node name="z1_p3" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(81, -194)
+
+[node name="destinationPoint" parent="z1_p3" index="2"]
+position = Vector2(-2, 156)
+
+[node name="z1_p4" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(184, -179)
+
+[node name="destinationPoint" parent="z1_p4" index="2"]
+position = Vector2(-105, 141)
+
+[node name="z1_p5" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(284, -140)
+
+[node name="destinationPoint" parent="z1_p5" index="2"]
+position = Vector2(-205, 102)
+
+[node name="z1_p6" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(92, 175)
 
-[node name="Area2D5" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(894, 13)
+[node name="destinationPoint" parent="z1_p6" index="2"]
+position = Vector2(-13, -213)
 
-[node name="Area2D6" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(788, 11)
-
-[node name="Area2D7" parent="." instance=ExtResource("2_awe8u")]
+[node name="z2_p1" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(699, 46)
 
-[node name="Area2D8" parent="." instance=ExtResource("2_awe8u")]
+[node name="destinationPoint" parent="z2_p1" index="2"]
+position = Vector2(197, 105)
+
+[node name="z2_p2" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(788, 11)
+
+[node name="destinationPoint" parent="z2_p2" index="2"]
+position = Vector2(108, 140)
+
+[node name="z2_p3_V" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(894, 13)
+
+[node name="destinationPoint" parent="z2_p3_V" index="2"]
+position = Vector2(826, 141)
+
+[node name="z2_p4" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(1003, 15)
 
-[node name="Area2D9" parent="." instance=ExtResource("2_awe8u")]
+[node name="destinationPoint" parent="z2_p4" index="2"]
+position = Vector2(-107, 136)
+
+[node name="z2_p5" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(1091, 36)
 
-[node name="Area2D10" parent="." instance=ExtResource("2_awe8u")]
+[node name="destinationPoint" parent="z2_p5" index="2"]
+position = Vector2(-195, 115)
+
+[node name="z3_p1" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(1464, 123)
 
-[node name="Area2D11" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(1980, 115)
-
-[node name="Area2D12" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(1641, 206)
-
-[node name="Area2D13" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(1797, 200)
-
-[node name="Area2D14" parent="." instance=ExtResource("2_awe8u")]
+[node name="z3_p2" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(1582, 213)
 
-[node name="Area2D15" parent="." instance=ExtResource("2_awe8u")]
+[node name="z3_p3" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1641, 206)
+
+[node name="z3_p4" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1797, 200)
+
+[node name="z3_p5" parent="." instance=ExtResource("2_awe8u")]
 position = Vector2(1856, 211)
+
+[node name="z3_p6" parent="." instance=ExtResource("2_awe8u")]
+position = Vector2(1980, 115)
+
+[editable path="z1_p1"]
+[editable path="z1_p2_V"]
+[editable path="z1_p3"]
+[editable path="z1_p4"]
+[editable path="z1_p5"]
+[editable path="z1_p6"]
+[editable path="z2_p1"]
+[editable path="z2_p2"]
+[editable path="z2_p3_V"]
+[editable path="z2_p4"]
+[editable path="z2_p5"]
+[editable path="z3_p1"]
+[editable path="z3_p2"]
+[editable path="z3_p3"]
+[editable path="z3_p4"]
+[editable path="z3_p5"]
+[editable path="z3_p6"]
