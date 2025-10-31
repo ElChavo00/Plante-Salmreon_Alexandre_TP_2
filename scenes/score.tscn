@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cku21n7alnqrn"]
+
+[ext_resource type="FontFile" uid="uid://b7wh86f6alql0" path="res://assets/fonts/PixelOperator8.ttf" id="1_bak1h"]
+[ext_resource type="Texture2D" uid="uid://dt3krt8vw8si5" path="res://assets/sprites/coin.png" id="2_plgac"]
+
+[node name="score" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -15.0
+offset_right = 63.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("1_bak1h")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_plgac")
+region_enabled = true
+region_rect = Rect2(96.3111, 0, 15.1348, 16)

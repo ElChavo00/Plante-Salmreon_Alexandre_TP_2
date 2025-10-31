@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckpih6sdr733s"]
+
+[ext_resource type="FontFile" uid="uid://b7wh86f6alql0" path="res://assets/fonts/PixelOperator8.ttf" id="1_t3kyo"]
+[ext_resource type="Texture2D" uid="uid://dacopagm7ecs8" path="res://assets/sprites/knight.png" id="2_t3kyo"]
+
+[node name="score" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -15.0
+offset_right = 63.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("1_t3kyo")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_t3kyo")
+region_enabled = true
+region_rect = Rect2(6.82198, 7.07275, 18.6228, 22.2529)

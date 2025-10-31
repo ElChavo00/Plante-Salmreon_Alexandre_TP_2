@@ -395,42 +395,6 @@ position = Vector2(-402, -423)
 [node name="portal" parent="." instance=ExtResource("5_uic66")]
 position = Vector2(1067, 416)
 
-[node name="coin" parent="." instance=ExtResource("6_exien")]
-position = Vector2(-45, 16)
-
-[node name="coin2" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(65, 154)
-
-[node name="coin3" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(206, 213)
-
-[node name="coin4" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(307, 205)
-
-[node name="coin5" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(402, 312)
-
-[node name="coin6" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(384, 4)
-
-[node name="coin7" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(652, 85)
-
-[node name="coin8" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(829, 92)
-
-[node name="coin9" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(832, -27)
-
-[node name="coin10" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(953, -137)
-
-[node name="coin11" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(1113, 349)
-
-[node name="coin" parent="coin" instance=ExtResource("6_exien")]
-position = Vector2(737, 195)
-
 [node name="mechant" parent="." instance=ExtResource("7_5w0ad")]
 position = Vector2(330, -59)
 flip_h = true
@@ -454,5 +418,41 @@ flip_h = true
 position = Vector2(-191, 95)
 scale = Vector2(1.15625, 1.0625)
 frame_progress = 0.0120976
+
+[node name="coin" parent="." instance=ExtResource("6_exien")]
+position = Vector2(-45, 16)
+
+[node name="coin2" parent="." instance=ExtResource("6_exien")]
+position = Vector2(20, 170)
+
+[node name="coin3" parent="." instance=ExtResource("6_exien")]
+position = Vector2(161, 229)
+
+[node name="coin4" parent="." instance=ExtResource("6_exien")]
+position = Vector2(262, 221)
+
+[node name="coin5" parent="." instance=ExtResource("6_exien")]
+position = Vector2(357, 328)
+
+[node name="coin6" parent="." instance=ExtResource("6_exien")]
+position = Vector2(339, 20)
+
+[node name="coin7" parent="." instance=ExtResource("6_exien")]
+position = Vector2(607, 101)
+
+[node name="coin8" parent="." instance=ExtResource("6_exien")]
+position = Vector2(784, 108)
+
+[node name="coin9" parent="." instance=ExtResource("6_exien")]
+position = Vector2(787, -11)
+
+[node name="coin10" parent="." instance=ExtResource("6_exien")]
+position = Vector2(908, -121)
+
+[node name="coin11" parent="." instance=ExtResource("6_exien")]
+position = Vector2(1068, 365)
+
+[node name="coin12" parent="." instance=ExtResource("6_exien")]
+position = Vector2(692, 211)
 
 [editable path="portal2"]

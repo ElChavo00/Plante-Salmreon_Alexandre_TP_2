@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c7b431058ww6s"]
+[gd_scene load_steps=12 format=4 uid="uid://c7b431058ww6s"]
 
 [ext_resource type="PackedScene" uid="uid://ckafu2mec7kvs" path="res://scenes/player.tscn" id="1_6e84v"]
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="2_4dvvg"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bu2jh26veowr7" path="res://scenes/killzone.tscn" id="3_4vge2"]
 [ext_resource type="PackedScene" uid="uid://guckiysv2ic1" path="res://scripts/coin.tscn" id="3_rnjyy"]
 [ext_resource type="PackedScene" uid="uid://cx1xq56gyfakt" path="res://scenes/portal_to_z2.tscn" id="6_j7wrs"]
+[ext_resource type="PackedScene" uid="uid://cku21n7alnqrn" path="res://scenes/score.tscn" id="7_hh0fu"]
+[ext_resource type="PackedScene" uid="uid://ckpih6sdr733s" path="res://scenes/vie.tscn" id="8_3m5ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnjyy"]
 texture = ExtResource("2_4dvvg")
@@ -212,33 +214,6 @@ limit_right = 1710
 limit_bottom = 749
 position_smoothing_enabled = true
 
-[node name="coin" parent="." instance=ExtResource("3_rnjyy")]
-position = Vector2(40, -23)
-
-[node name="coin2" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(111, -33)
-
-[node name="coin3" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(-138, -53)
-
-[node name="coin4" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(384, -32)
-
-[node name="coin5" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(287, -34)
-
-[node name="coin6" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(595, 16)
-
-[node name="coin20" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(-211, 83)
-
-[node name="coin21" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(-267, -45)
-
-[node name="coin22" parent="coin" instance=ExtResource("3_rnjyy")]
-position = Vector2(2, 109)
-
 [node name="killzone" parent="." instance=ExtResource("3_4vge2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
@@ -255,3 +230,53 @@ frame_progress = 0.5105
 
 [node name="portal" parent="." instance=ExtResource("6_j7wrs")]
 position = Vector2(955, -42)
+
+[node name="coin" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(40, -25)
+
+[node name="coin2" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(151, -56)
+
+[node name="coin3" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(-98, -76)
+
+[node name="coin4" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(424, -55)
+
+[node name="coin5" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(327, -57)
+
+[node name="coin6" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(635, -7)
+
+[node name="coin20" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(-171, 60)
+
+[node name="coin21" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(-227, -68)
+
+[node name="coin22" parent="." instance=ExtResource("3_rnjyy")]
+position = Vector2(42, 86)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.063
+anchor_top = 0.074
+anchor_right = 0.179
+anchor_bottom = 0.189
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 40
+
+[node name="score" parent="CanvasLayer/Control/VBoxContainer" instance=ExtResource("7_hh0fu")]
+layout_mode = 2
+
+[node name="score2" parent="CanvasLayer/Control/VBoxContainer" instance=ExtResource("8_3m5ht")]
+layout_mode = 2
