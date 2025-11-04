@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://dk21useph4mf7"]
+[gd_scene load_steps=11 format=4 uid="uid://dk21useph4mf7"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_beonj"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_awe8u"]
 [ext_resource type="PackedScene" uid="uid://ckafu2mec7kvs" path="res://scenes/player.tscn" id="3_jsn8n"]
 [ext_resource type="PackedScene" uid="uid://bu2jh26veowr7" path="res://scenes/killzone.tscn" id="4_c6pw2"]
+[ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="5_s43yw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awe8u"]
 texture = ExtResource("1_beonj")
@@ -437,6 +438,8 @@ position = Vector2(2, 476)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 shape = SubResource("WorldBoundaryShape2D_s43yw")
+
+[node name="HUD" parent="." instance=ExtResource("5_s43yw")]
 
 [editable path="z1_p1"]
 [editable path="z1_p2_V"]

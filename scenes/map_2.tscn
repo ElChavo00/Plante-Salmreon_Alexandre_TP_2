@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c05gjk3edvy5u"]
+[gd_scene load_steps=14 format=4 uid="uid://c05gjk3edvy5u"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_3h78v"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_a7y6p"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3sw2ja23an5q" path="res://scenes/portal_to_z_3.tscn" id="5_uic66"]
 [ext_resource type="PackedScene" uid="uid://guckiysv2ic1" path="res://scripts/coin.tscn" id="6_exien"]
 [ext_resource type="PackedScene" uid="uid://dkp3t50l5l0oy" path="res://scenes/mechant.tscn" id="7_5w0ad"]
+[ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="8_5w0ad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2xha"]
 texture = ExtResource("1_3h78v")
@@ -454,5 +455,7 @@ position = Vector2(1068, 365)
 
 [node name="coin12" parent="." instance=ExtResource("6_exien")]
 position = Vector2(692, 211)
+
+[node name="HUD" parent="." instance=ExtResource("8_5w0ad")]
 
 [editable path="portal2"]
