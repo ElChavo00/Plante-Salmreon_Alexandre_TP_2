@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://dk21useph4mf7"]
+[gd_scene load_steps=12 format=4 uid="uid://dk21useph4mf7"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_beonj"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_awe8u"]
 [ext_resource type="PackedScene" uid="uid://ckafu2mec7kvs" path="res://scenes/player.tscn" id="3_jsn8n"]
 [ext_resource type="PackedScene" uid="uid://bu2jh26veowr7" path="res://scenes/killzone.tscn" id="4_c6pw2"]
 [ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="5_s43yw"]
+[ext_resource type="PackedScene" uid="uid://6r1irm48wran" path="res://scenes/portal_to_end.tscn" id="6_ryx0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awe8u"]
 texture = ExtResource("1_beonj")
@@ -423,9 +424,6 @@ position = Vector2(1856, 211)
 [node name="destinationPoint" parent="z3_p5" index="2"]
 position = Vector2(-136, -57)
 
-[node name="z3_p6" parent="." instance=ExtResource("2_awe8u")]
-position = Vector2(1980, 115)
-
 [node name="player" parent="." instance=ExtResource("3_jsn8n")]
 position = Vector2(82, -29)
 
@@ -440,6 +438,9 @@ position = Vector2(2, 476)
 shape = SubResource("WorldBoundaryShape2D_s43yw")
 
 [node name="HUD" parent="." instance=ExtResource("5_s43yw")]
+
+[node name="Area2D" parent="." instance=ExtResource("6_ryx0p")]
+position = Vector2(1943, 111)
 
 [editable path="z1_p1"]
 [editable path="z1_p2_V"]
@@ -457,4 +458,3 @@ shape = SubResource("WorldBoundaryShape2D_s43yw")
 [editable path="z3_p3"]
 [editable path="z3_p4"]
 [editable path="z3_p5"]
-[editable path="z3_p6"]
