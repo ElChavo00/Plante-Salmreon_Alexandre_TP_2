@@ -1,5 +1,10 @@
 extends Control
 
+@onready var optionsMenu = preload("res://scenes/pause.tscn")
+func _ready():
+	$AnimationPlayer.play("RESET")
+
+
 func resume():
 	get_tree().paused = false
 	$AnimationPlayer.play_backwards("blur")

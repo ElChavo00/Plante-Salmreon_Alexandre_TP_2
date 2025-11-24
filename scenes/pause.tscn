@@ -114,3 +114,7 @@ text = "Quitter"
 libraries = {
 &"": SubResource("AnimationLibrary_wen6a")
 }
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/resumer" to="." method="_on_resumer_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/recommencer" to="." method="_on_recommencer_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
