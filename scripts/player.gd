@@ -7,6 +7,10 @@ const FALL_LIMIT = 2000
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var has_double_jump_item = false
+
+var jumps_made = 0
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound = $JumpSound
 
@@ -20,10 +24,21 @@ func _physics_process(delta):
 		die() 
 
 	
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		jump_sound.play()
-		print("Saut déclenché !") 
+	if is_on_floor():
+		jumps_made = 0
+
+	# Gestion du Saut
+	if Input.is_action_just_pressed("ui_accept"):
+		
+		if is_on_floor():
+			velocity.y = JUMP_VELOCITY
+			jump_sound.play()
+		
+		
+		elif has_double_jump_item and jumps_made < 1:
+			velocity.y = JUMP_VELOCITY 
+			jumps_made += 1 
+			jump_sound.play()  
 	
 	var direction = Input.get_axis("ui_left", "ui_right")
 	
@@ -48,3 +63,7 @@ func die():
 	
 	
 	get_tree().reload_current_scene()
+
+func unlock_double_jump():
+	has_double_jump_item = true
+	print("Double saut activé !")

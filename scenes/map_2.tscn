@@ -464,5 +464,10 @@ position = Vector2(692, 211)
 
 [node name="Pancarte" parent="." instance=ExtResource("10_0a3ge")]
 position = Vector2(58, -7)
+message = "Gauche ou Droite"
+
+[node name="Pancarte2" parent="." instance=ExtResource("10_0a3ge")]
+position = Vector2(1018, -71)
+message = "Sautez"
 
 [editable path="portal2"]

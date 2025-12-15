@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://1okjkym0u0ep"]
+
+[ext_resource type="Script" uid="uid://cjf7w1ycsdwyx" path="res://scenes/potion.gd" id="1_le10y"]
+[ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_ym5ma"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le10y"]
+atlas = ExtResource("1_ym5ma")
+region = Rect2(3.90145, 113.855, 8.1492, 14.147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itmmj"]
+size = Vector2(14, 17)
+
+[node name="potion" type="Area2D"]
+script = ExtResource("1_le10y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_le10y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_itmmj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
