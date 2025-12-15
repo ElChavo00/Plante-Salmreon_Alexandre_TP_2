@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://du8vyrcuove6e"]
+
+[ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_a2hk1"]
+[ext_resource type="Script" uid="uid://dwyi41yodmor" path="res://scenes/pancarte.gd" id="1_tbq7m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbq7m"]
+atlas = ExtResource("1_a2hk1")
+region = Rect2(128.882, 65.8736, 14.2385, 14.1232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mjvt"]
+size = Vector2(24, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_muc4n"]
+bg_color = Color(0, 0, 0, 0.439216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 9
+
+[node name="Pancarte" type="Area2D"]
+script = ExtResource("1_tbq7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_tbq7m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_4mjvt")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+offset_left = -40.0
+offset_top = -27.0
+offset_right = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_muc4n")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Testsjhdgf"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

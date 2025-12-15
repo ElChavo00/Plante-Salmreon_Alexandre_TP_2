@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dmkijxe7hqss2" path="res://scenes/pause_menu.gd" id="1_sf2id"]
 
 [node name="PauseMenu" type="CanvasLayer"]
-process_mode = 2
+process_mode = 3
 script = ExtResource("1_sf2id")
 
 [node name="ColorRect" type="ColorRect" parent="."]

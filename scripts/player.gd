@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-# La limite à partir de laquelle on considère que le joueur est tombé dans le vide
+
 const FALL_LIMIT = 2000 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

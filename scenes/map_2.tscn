@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c05gjk3edvy5u"]
+[gd_scene load_steps=16 format=4 uid="uid://c05gjk3edvy5u"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_3h78v"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_a7y6p"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://guckiysv2ic1" path="res://scripts/coin.tscn" id="6_exien"]
 [ext_resource type="PackedScene" uid="uid://dkp3t50l5l0oy" path="res://scenes/mechant.tscn" id="7_5w0ad"]
 [ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="8_5w0ad"]
+[ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="9_kocsa"]
+[ext_resource type="PackedScene" uid="uid://du8vyrcuove6e" path="res://scenes/pancarte.tscn" id="10_0a3ge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2xha"]
 texture = ExtResource("1_3h78v")
@@ -457,5 +459,10 @@ position = Vector2(1068, 365)
 position = Vector2(692, 211)
 
 [node name="HUD" parent="." instance=ExtResource("8_5w0ad")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_kocsa")]
+
+[node name="Pancarte" parent="." instance=ExtResource("10_0a3ge")]
+position = Vector2(58, -7)
 
 [editable path="portal2"]

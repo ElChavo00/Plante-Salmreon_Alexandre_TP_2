@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dk21useph4mf7"]
+[gd_scene load_steps=14 format=4 uid="uid://dk21useph4mf7"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_beonj"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_awe8u"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bu2jh26veowr7" path="res://scenes/killzone.tscn" id="4_c6pw2"]
 [ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="5_s43yw"]
 [ext_resource type="PackedScene" uid="uid://6r1irm48wran" path="res://scenes/portal_to_end.tscn" id="6_ryx0p"]
+[ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="7_vtpsr"]
+[ext_resource type="PackedScene" uid="uid://du8vyrcuove6e" path="res://scenes/pancarte.tscn" id="8_0a7yh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awe8u"]
 texture = ExtResource("1_beonj")
@@ -441,6 +443,12 @@ shape = SubResource("WorldBoundaryShape2D_s43yw")
 
 [node name="Area2D" parent="." instance=ExtResource("6_ryx0p")]
 position = Vector2(1943, 111)
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_vtpsr")]
+
+[node name="Pancarte" parent="." instance=ExtResource("8_0a7yh")]
+position = Vector2(67, -23)
+message = "Quel Potail"
 
 [editable path="z1_p1"]
 [editable path="z1_p2_V"]

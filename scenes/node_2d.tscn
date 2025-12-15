@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c7b431058ww6s"]
+[gd_scene load_steps=13 format=4 uid="uid://c7b431058ww6s"]
 
 [ext_resource type="PackedScene" uid="uid://ckafu2mec7kvs" path="res://scenes/player.tscn" id="1_6e84v"]
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="2_4dvvg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cx1xq56gyfakt" path="res://scenes/portal_to_z2.tscn" id="6_j7wrs"]
 [ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="7_fws66"]
 [ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="8_hh0fu"]
+[ext_resource type="PackedScene" uid="uid://du8vyrcuove6e" path="res://scenes/pancarte.tscn" id="9_3m5ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnjyy"]
 texture = ExtResource("2_4dvvg")
@@ -261,4 +262,11 @@ position = Vector2(42, 86)
 [node name="HUD" parent="." instance=ExtResource("7_fws66")]
 
 [node name="PauseMneu" parent="." instance=ExtResource("8_hh0fu")]
-process_mode = 3
+
+[node name="Pancarte" parent="." instance=ExtResource("9_3m5ht")]
+position = Vector2(24, -7)
+message = "Collectioner les piéces d'Or"
+
+[node name="Pancarte2" parent="." instance=ExtResource("9_3m5ht")]
+position = Vector2(920, -23)
+message = "Attendez dans le Portail"
