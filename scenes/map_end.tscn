@@ -387,7 +387,6 @@ position = Vector2(130, -718)
 position = Vector2(11, -732)
 
 [node name="player" parent="." instance=ExtResource("2_ki25i")]
-position = Vector2(57, -718)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(4, 4)

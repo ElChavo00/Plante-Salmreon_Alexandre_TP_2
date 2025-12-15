@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvtp3yvxiy8fn"]
 
-[ext_resource type="AudioStream" uid="uid://biol46nos2bp3" path="res://assets/music/Gerudo Valley.mp3" id="1_1t2k3"]
+[ext_resource type="AudioStream" uid="uid://cycbddkqfccuy" path="res://assets/music/medieval-flute-amp-irish-rock-fusion-359426.mp3" id="1_1t2k3"]
 
 [node name="musique" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_1t2k3")
