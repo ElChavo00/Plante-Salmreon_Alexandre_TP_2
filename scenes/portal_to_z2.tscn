@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cx1xq56gyfakt"]
+[gd_scene load_steps=14 format=3 uid="uid://cx1xq56gyfakt"]
 
 [ext_resource type="Script" uid="uid://hxueyebx21n4" path="res://scripts/portal_to_z2.gd" id="1_l4nxd"]
 [ext_resource type="Texture2D" uid="uid://c7rih840n2xcj" path="res://assets/sprites/Purple Portal Sprite Sheet.png" id="2_2sv68"]
+[ext_resource type="AudioStream" uid="uid://dc8cxv4p0r70j" path="res://assets/sounds/teleport-game-sound-effect-379236.mp3" id="3_2sv68"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5gmy"]
 atlas = ExtResource("2_2sv68")
@@ -81,5 +82,8 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_vchaa")
+
+[node name="TeleportSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2sv68")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

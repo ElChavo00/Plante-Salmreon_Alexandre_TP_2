@@ -258,3 +258,4 @@ position = Vector2(-227, -68)
 position = Vector2(42, 86)
 
 [node name="HUD" parent="." instance=ExtResource("7_fws66")]
+visible = false

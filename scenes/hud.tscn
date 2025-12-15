@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://1na2rb1uqk2l"]
+[gd_scene load_steps=4 format=3 uid="uid://1na2rb1uqk2l"]
 
+[ext_resource type="Script" uid="uid://dm3aiw2mbbwui" path="res://scenes/hud.gd" id="1_5ysmq"]
 [ext_resource type="PackedScene" uid="uid://cku21n7alnqrn" path="res://scenes/score.tscn" id="1_oo0fn"]
 [ext_resource type="PackedScene" uid="uid://ckpih6sdr733s" path="res://scenes/vie.tscn" id="2_5ysmq"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5ysmq")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

@@ -1,38 +1,32 @@
-extends Control
+extends CharacterBody2D
 
-@onready var optionsMenu = preload("res://scenes/pause.tscn")
-func _ready():
-	$AnimationPlayer.play("RESET")
+const SPEED = 130.0
+const JUMP_VELOCITY = -300.0
 
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-func resume():
-	get_tree().paused = false
-	$AnimationPlayer.play_backwards("blur")
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sound = $JumpSound  # <--- AJOUT : On récupère le nœud de son
 
-func pause():
-	get_tree().paused = true
-	$AnimationPlayer.play("blur")
+func _physics_process(delta):
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	
+	# C'est ici que le saut se déclenche
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		jump_sound.play()  # <--- AJOUT : On joue le son !
+	
+	var direction = Input.get_axis("ui_left", "ui_right")
+	
+	if direction > 0:
+		animated_sprite_2d.flip_h = false
+	elif direction < 0:
+		animated_sprite_2d.flip_h = true
+	
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-func testEsc():
-	if Input.is_action_just_pressed("esc") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("esc") and get_tree().paused:
-		resume()
-
-
-
-
-func _process(delta):
-	testEsc()
-
-
-func _on_resumer_pressed():
-	resume()
-
-
-func _on_quitter_pressed():
-	get_tree().quit()
-
-
-func _on_recommencer_pressed():
-	get_tree().reload_current_scene()
+	move_and_slide()

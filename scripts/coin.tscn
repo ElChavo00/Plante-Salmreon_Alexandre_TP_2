@@ -110,7 +110,7 @@ frame_progress = 0.0819012
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1w32w")
 
-[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rdkb7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
