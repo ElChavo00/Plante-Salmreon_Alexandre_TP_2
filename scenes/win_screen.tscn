@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://vvnrwyg07cvu"]
+
+[ext_resource type="Script" uid="uid://1tude3xjbue1" path="res://scenes/win_screen.gd" id="1_erk2x"]
+[ext_resource type="Texture2D" uid="uid://eo7mx5uyqe78" path="res://assets/sprites/Gemini_Generated_Image_6c13iz6c13iz6c13.png" id="1_wv5lq"]
+[ext_resource type="FontFile" uid="uid://bc8fr0fqlb0fd" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_2l6cc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e41g7"]
+font = ExtResource("3_2l6cc")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lrm4"]
+font = ExtResource("3_2l6cc")
+font_color = Color(0, 0, 0, 1)
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_erk2x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -71.0
+offset_right = 83.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wv5lq")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 776.0
+offset_top = 689.0
+offset_right = 1252.0
+offset_bottom = 181.0
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_e41g7")
+
+[node name="DeathLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_0lrm4")
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "RETOUR AU MENU"
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
