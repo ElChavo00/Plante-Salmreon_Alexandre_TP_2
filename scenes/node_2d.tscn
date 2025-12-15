@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c7b431058ww6s"]
+[gd_scene load_steps=12 format=4 uid="uid://c7b431058ww6s"]
 
 [ext_resource type="PackedScene" uid="uid://ckafu2mec7kvs" path="res://scenes/player.tscn" id="1_6e84v"]
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="2_4dvvg"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://guckiysv2ic1" path="res://scripts/coin.tscn" id="3_rnjyy"]
 [ext_resource type="PackedScene" uid="uid://cx1xq56gyfakt" path="res://scenes/portal_to_z2.tscn" id="6_j7wrs"]
 [ext_resource type="PackedScene" uid="uid://1na2rb1uqk2l" path="res://scenes/hud.tscn" id="7_fws66"]
+[ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="8_hh0fu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnjyy"]
 texture = ExtResource("2_4dvvg")
@@ -258,3 +259,6 @@ position = Vector2(-227, -68)
 position = Vector2(42, 86)
 
 [node name="HUD" parent="." instance=ExtResource("7_fws66")]
+
+[node name="PauseMneu" parent="." instance=ExtResource("8_hh0fu")]
+process_mode = 3
