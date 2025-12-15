@@ -9,9 +9,25 @@ region = Rect2(15.9968, 15.9815, 32.0987, 9.03314)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ngc"]
 size = Vector2(32, 9)
 
+[sub_resource type="Animation" id="Animation_5nap5"]
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlateformeMobileHorizontale:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.01, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(200, 0), Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_lms1h"]
 resource_name = "bouger_horizontal"
-length = 3.0
+length = 6.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -20,25 +36,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(110.495, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5nap5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(200, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwwpf"]
@@ -47,17 +48,21 @@ _data = {
 &"bouger_horizontal": SubResource("Animation_lms1h")
 }
 
-[node name="PlateformeMobile" type="AnimatableBody2D"]
+[node name="PlateformeContainer" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PlateformeMobileHorizontale" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlateformeMobileHorizontale"]
+position = Vector2(0.706871, 0)
 texture = SubResource("AtlasTexture_sjd02")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateformeMobileHorizontale"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_q5ngc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlateformeMobileHorizontale"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_lwwpf")
 }
-autoplay = "bouger_horizontal"
+autoplay = "RESET"

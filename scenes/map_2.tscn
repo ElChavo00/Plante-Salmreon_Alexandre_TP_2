@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c05gjk3edvy5u"]
+[gd_scene load_steps=18 format=4 uid="uid://c05gjk3edvy5u"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_3h78v"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_a7y6p"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="9_kocsa"]
 [ext_resource type="PackedScene" uid="uid://du8vyrcuove6e" path="res://scenes/pancarte.tscn" id="10_0a3ge"]
 [ext_resource type="PackedScene" uid="uid://1okjkym0u0ep" path="res://scenes/potion.tscn" id="11_v41ee"]
+[ext_resource type="PackedScene" uid="uid://6r1irm48wran" path="res://scenes/portal_to_end.tscn" id="12_tltda"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2xha"]
 texture = ExtResource("1_3h78v")
@@ -391,7 +392,7 @@ position = Vector2(333, 651)
 shape = SubResource("WorldBoundaryShape2D_8i8ja")
 
 [node name="portal2" parent="." instance=ExtResource("2_a7y6p")]
-position = Vector2(491, 413)
+position = Vector2(456, 414)
 
 [node name="destinationPoint" parent="portal2" index="2"]
 position = Vector2(-402, -423)
@@ -473,5 +474,8 @@ message = "Sautez"
 
 [node name="potion" parent="." instance=ExtResource("11_v41ee")]
 position = Vector2(394, 425)
+
+[node name="Area2D" parent="." instance=ExtResource("12_tltda")]
+position = Vector2(331, 521)
 
 [editable path="portal2"]
