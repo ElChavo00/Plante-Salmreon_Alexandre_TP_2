@@ -1,11 +1,24 @@
 extends CanvasLayer
 
-# On récupère les Labels qui sont dans les sous-scènes score et score2
-# Vérifie bien que le chemin correspond à ton arbre de scène !
-@onready var score_label = $Control/VBoxContainer/score/Label
-@onready var morts_label = $Control/VBoxContainer/score2/Label
 
-func _process(delta):
-	# À chaque image, on met à jour le texte avec les valeurs globales
-	score_label.text = str(GameManager.score)
-	morts_label.text = str(GameManager.morts)
+@onready var score_label: Label = $Control/VBoxContainer/HBoxContainer/ScoreLabel
+@onready var death_label: Label = $Control/VBoxContainer/HBoxContainer2/DeathLabel
+
+
+
+func _ready():
+	
+	update_score_text(GameManager.score)
+	update_death_text(GameManager.deaths)
+	
+	
+	GameManager.score_updated.connect(update_score_text)
+	GameManager.deaths_updated.connect(update_death_text)
+
+
+func update_score_text(new_value):
+	score_label.text = "Pièces : " + str(new_value)
+
+
+func update_death_text(new_value):
+	death_label.text = "Morts : " + str(new_value)
