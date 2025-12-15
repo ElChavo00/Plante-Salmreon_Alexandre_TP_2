@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dk21useph4mf7"]
+[gd_scene load_steps=15 format=4 uid="uid://dk21useph4mf7"]
 
 [ext_resource type="Texture2D" uid="uid://dnllivt3juf3f" path="res://assets/sprites/world_tileset.png" id="1_beonj"]
 [ext_resource type="PackedScene" uid="uid://dn1m4eo35yx6w" path="res://scenes/portal.tscn" id="2_awe8u"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6r1irm48wran" path="res://scenes/portal_to_end.tscn" id="6_ryx0p"]
 [ext_resource type="PackedScene" uid="uid://dlr4oyfpxqd6y" path="res://scenes/pause_menu.tscn" id="7_vtpsr"]
 [ext_resource type="PackedScene" uid="uid://du8vyrcuove6e" path="res://scenes/pancarte.tscn" id="8_0a7yh"]
+[ext_resource type="PackedScene" uid="uid://1okjkym0u0ep" path="res://scenes/potion.tscn" id="9_fwffn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awe8u"]
 texture = ExtResource("1_beonj")
@@ -449,6 +450,9 @@ position = Vector2(1943, 111)
 [node name="Pancarte" parent="." instance=ExtResource("8_0a7yh")]
 position = Vector2(67, -23)
 message = "Quel Potail"
+
+[node name="potion" parent="." instance=ExtResource("9_fwffn")]
+position = Vector2(133, 201)
 
 [editable path="z1_p1"]
 [editable path="z1_p2_V"]
